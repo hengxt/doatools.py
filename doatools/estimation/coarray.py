@@ -85,12 +85,12 @@ class CoarrayACMBuilder1D:
             raise ValueError('Method can only be one of the following: ss, da.')
         mc = self._w.get_central_ula_size()
         mv = (mc + 1) // 2
-        z = np.zeros((mc,), dtype=np.complex_)
+        z = np.zeros((mc,), dtype=np.complex128)
         r = vec(R)
         for i in range(mc):
             diff = i - mv + 1
             z[i] = np.mean(r[self._w.indices_of(diff)])
-        Ra = np.zeros((mv, mv), dtype=np.complex_)
+        Ra = np.zeros((mv, mv), dtype=np.complex128)
         if method == 'ss':
             # Spatial smoothing
             for i in range(mv):
