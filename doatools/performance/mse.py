@@ -148,7 +148,7 @@ def ecov_coarray_music_1d(array, sources, wavelength, p, sigma, n_snapshots=1,
     proj_En = En @ En_H
     # Evalute xi_k.
     GF_T = (G @ F).T
-    Xi_g = np.zeros((m * m, k), dtype=np.complex_)
+    Xi_g = np.zeros((m * m, k), dtype=np.complex64)
     pinv_Av = np.linalg.pinv(Av)
     for kk in range(k):
         d_ak = DAv[:,kk]

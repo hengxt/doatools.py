@@ -1,8 +1,10 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import warnings
+
+import matplotlib.pyplot as plt
+import numpy as np
+
 from ..model.coarray import compute_unique_location_differences
+
 
 def _auto_scatter(ax, x, *args, **kwargs):
     """Scatter plots the input points (1D, 2D, or 3D).

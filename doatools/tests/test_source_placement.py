@@ -112,7 +112,7 @@ class TestFarField2D(unittest.TestCase):
     def test_basics(self):
         locations = np.array([
             [0, 30], [0, 50], [135, 35], [150, 70], [-120, 60]
-        ], dtype=np.float_)
+        ], dtype=np.float32)
         sources = FarField2DSourcePlacement(locations, 'deg')
         self.assertTrue(sources.is_far_field)
         self.assertEqual(sources.size, len(locations))

@@ -89,7 +89,7 @@ def sorte(x):
     sigmas = [np.var(diffs[k:]) for k in range(n - 1)]
     s = np.zeros((n - 2,))
     for k in range(n - 2):
-        if np.abs(sigmas[k]) < np.finfo(np.float_).eps:
+        if np.abs(sigmas[k]) < np.finfo(np.float32).eps:
             s[k] = np.inf
         else:
             s[k] = sigmas[k + 1] / sigmas[k]

@@ -26,12 +26,12 @@ setup(
     author='Mianzhi Wang',
     # author_email='',
     packages=find_packages(exclude=('docs',)),
-    python_requires='>=3.11',
+    python_requires='>=3.5',
     install_requires=[
-        'numpy>=2.0.0',
-        'scipy>=1.15.2',
-        'matplotlib>=3.10.0',
-        'cvxpy>=1.6.4'
+        'numpy>=1.14.0',
+        'scipy>=1.1.0',
+        'matplotlib>=2.1.0',
+        'cvxpy>=1.0.8'
     ],
     zip_safe=False,
     classifiers=[
@@ -39,6 +39,9 @@ setup(
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Scientific/Engineering',
     ]
 )

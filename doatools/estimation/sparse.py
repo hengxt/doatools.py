@@ -1,10 +1,10 @@
-import warnings
-from abc import ABC, abstractmethod
 import numpy as np
+
 from .core import SpectrumBasedEstimatorBase, ensure_covariance_size
 from ..optim.l1lsq import L1RegularizedLeastSquaresProblem, \
-                          L21RegularizedLeastSquaresProblem
+    L21RegularizedLeastSquaresProblem
 from ..utils.math import khatri_rao, vec
+
 
 class SparseCovarianceMatching(SpectrumBasedEstimatorBase):
     r"""Creates a source location estimator based on matching the sparse

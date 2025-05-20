@@ -1,8 +1,9 @@
-from collections import namedtuple
-from abc import ABC, abstractmethod
+from abc import ABC
+
 import numpy as np
-from scipy.signal import find_peaks
 from scipy.ndimage import maximum_filter
+from scipy.signal import find_peaks
+
 
 # Helper functions for validating inputs.
 def ensure_covariance_size(R, array):

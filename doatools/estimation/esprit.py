@@ -62,7 +62,7 @@ class Esprit1D:
             
             formulation (str): Method used to estimate the rotation matrix.
                 Either ``'tls'`` (Total Lease Squares) or ``'ls'``
-                (Least Squares). Default value is ``'tls'``.
+                (The Least Squares). Default value is ``'tls'``.
             
             row_weights (str or ~numpy.ndarray): Specifies the row weights
                 with a vector or a string. Default value is ``'default'``, which

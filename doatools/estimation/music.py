@@ -1,10 +1,9 @@
 import numpy as np
-from math import ceil
-from scipy.signal import find_peaks
-import warnings
-from ..model.sources import FarField1DSourcePlacement
+
 from .core import SpectrumBasedEstimatorBase, get_noise_subspace, \
-                  ensure_covariance_size, ensure_n_resolvable_sources
+    ensure_covariance_size, ensure_n_resolvable_sources
+from ..model.sources import FarField1DSourcePlacement
+
 
 def f_music(A, En):
     r"""Computes the classical MUSIC spectrum
@@ -150,7 +149,7 @@ class RootMUSIC1D:
         En = get_noise_subspace(R, k)
         # Compute the coefficients for the polynomial.
         C = En @ En.T.conj()
-        coeff = np.zeros((m - 1,), dtype=np.complex_)
+        coeff = np.zeros((m - 1,), dtype=np.complex64)
         for i in range(1, m):
             coeff[i - 1] += np.sum(np.diag(C, i))
         coeff = np.hstack((coeff[::-1], np.sum(np.diag(C)), coeff.conj()))
