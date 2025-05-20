@@ -4,6 +4,7 @@ from ..model.coarray import WeightFunction1D
 from .core import ensure_covariance_size
 from ..utils.math import vec
 
+
 class CoarrayACMBuilder1D:
     """Creates a coarray-based augmented covariance matrix builder.
     
