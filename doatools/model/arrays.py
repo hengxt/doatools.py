@@ -478,9 +478,9 @@ class GridBasedArrayDesign(ArrayDesign):
         if bases is None:
             # Use d0 to generate bases.
             if np.isscalar(d0):
-                d0 = np.full((indices.shape[1],), d0, dtype=np.float32)
+                d0 = np.full((indices.shape[1],), d0, dtype=np.float64)
             else:
-                d0 = np.array(d0, dtype=np.float32)
+                d0 = np.array(d0, dtype=np.float64)
             if d0.ndim > 1 or indices.shape[1] < d0.size:
                 raise ValueError(
                     'd0 must be a scalar or a list-like object of length {0}.'
