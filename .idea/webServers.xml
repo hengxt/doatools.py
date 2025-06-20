@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="09f18ebe-bf45-4bd9-a5b6-8562e4a8300e" name="DoaTools">
+        <fileTransfer rootFolder="/home/hengxiantao/project/doatools.py" accessType="SFTP" host="vlcs-gpu2" port="22" sshConfigId="e5fd912c-355f-418d-b814-9b3e7f049f86" sshConfig="hengxiantao@vlcs-gpu2:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
